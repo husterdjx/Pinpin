@@ -1,0 +1,8 @@
+{
+  "DbSettings": {
+    "Username": "root",
+    "Password": "Mjy030105",
+    "Hostname": "localhost:3306",
+    "Dbname": "pinpin"
+  }
+}
