@@ -1,15 +1,16 @@
 package main
 
 import (
+	"Pinpin/middleware"
+	"Pinpin/routes"
 	"context"
 	"flag"
 	"fmt"
+
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
 	_ "gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"Pinpin/middleware"
-	"Pinpin/routes"
 
 	"Pinpin/config"
 	"Pinpin/global"
@@ -42,7 +43,7 @@ func initFlag() {
 
 // 读取环境配置文件
 func initConfig() {
-	configFile := configPrefix + *env + configSuffix
+	configFile := "/etc/pinpin/"+configPrefix + *env + configSuffix
 	fmt.Println(configFile)
 	global.Config = config.ReadSettingsFromFile(configFile)
 }
